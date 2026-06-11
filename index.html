@@ -3,46 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elite Jerseys</title>
+
+<title>CamisetasCSS | Camisas de Futebol Premium</title>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
 body{
-background:#fff;
-color:#111;
+background:#ffffff;
+color:#111111;
 }
 
 header{
 position:fixed;
 top:0;
+left:0;
 width:100%;
 background:rgba(255,255,255,.95);
 backdrop-filter:blur(10px);
-padding:20px 10%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 color:#0B7A3E;
 }
 
 nav a{
-margin-left:25px;
 text-decoration:none;
 color:#111;
-font-weight:500;
+margin-left:25px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+color:#0B7A3E;
 }
 
 .hero{
@@ -52,38 +59,44 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-background:linear-gradient(to bottom,#fff,#f5f5f5);
 padding:20px;
+background:linear-gradient(to bottom,#ffffff,#f3f3f3);
 }
 
 .hero h1{
-font-size:72px;
+font-size:clamp(40px,7vw,90px);
 max-width:1000px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
-margin-top:20px;
+font-size:22px;
 color:#555;
+max-width:700px;
 }
 
 .btn{
-margin-top:30px;
+margin-top:35px;
 background:#0B7A3E;
 color:white;
-padding:15px 35px;
+padding:16px 40px;
 border-radius:50px;
 text-decoration:none;
-font-weight:bold;
+font-weight:700;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .section{
-padding:120px 10%;
+padding:120px 8%;
 }
 
 .section-title{
-font-size:48px;
 text-align:center;
+font-size:50px;
 margin-bottom:60px;
 }
 
@@ -102,12 +115,12 @@ transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
 .card img{
 width:100%;
-height:350px;
+height:320px;
 object-fit:cover;
 }
 
@@ -116,7 +129,8 @@ padding:25px;
 }
 
 .card h3{
-font-size:24px;
+font-size:25px;
+margin-bottom:10px;
 }
 
 .price{
@@ -129,178 +143,214 @@ margin:15px 0;
 .buy{
 display:block;
 text-align:center;
-background:#111;
-color:white;
 padding:12px;
-border-radius:10px;
-text-decoration:none;
-}
-
-.feature{
 background:#111;
 color:white;
-text-align:center;
-padding:150px 10%;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
 }
 
-.feature h2{
-font-size:60px;
+.features{
+background:#111;
+color:white;
+padding:120px 8%;
+text-align:center;
+}
+
+.features h2{
+font-size:55px;
 margin-bottom:30px;
 }
 
-.feature p{
+.features p{
 font-size:22px;
 max-width:800px;
 margin:auto;
+line-height:1.7;
 }
 
-.sizes{
-max-width:800px;
-margin:auto;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+margin-top:60px;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+.stat{
+background:#1c1c1c;
+padding:30px;
+border-radius:20px;
 }
 
-th,td{
-padding:15px;
-border:1px solid #ddd;
-text-align:center;
+.stat h3{
+font-size:40px;
+color:#0B7A3E;
 }
 
 footer{
 background:#111;
 color:white;
-padding:50px;
+padding:60px 8%;
 text-align:center;
+}
+
+footer h3{
+font-size:30px;
+margin-bottom:20px;
 }
 
 .whatsapp{
 position:fixed;
-bottom:20px;
 right:20px;
+bottom:20px;
 background:#0B7A3E;
-color:white;
-padding:18px;
+width:65px;
+height:65px;
+display:flex;
+justify-content:center;
+align-items:center;
 border-radius:50%;
-font-size:22px;
+color:white;
 text-decoration:none;
+font-size:28px;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+}
+
+@media(max-width:768px){
+
+nav{
+display:none;
+}
+
+.section-title{
+font-size:36px;
+}
+
+.hero p{
+font-size:18px;
+}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<div class="logo">⚽ Elite Jerseys</div>
+
+<div class="logo">⚽ CamisetasCSS</div>
 
 <nav>
 <a href="#">Início</a>
-<a href="#">Camisas</a>
-<a href="#">Tamanhos</a>
-<a href="#">Contato</a>
+<a href="produtos.html">Produtos</a>
+<a href="rastreio.html">Rastreio</a>
+<a href="contato.html">Contato</a>
 </nav>
+
 </header>
 
 <section class="hero">
-<h1>Colecione a paixão. Vista a história.</h1>
-<p>As melhores camisas de futebol do mundo em um só lugar.</p>
-<a class="btn" href="#produtos">Comprar Agora</a>
+
+<h1>Vista a paixão.</h1>
+
+<p>
+As melhores camisas de futebol da Europa em um só lugar.
+Qualidade premium, conforto e estilo para quem vive o futebol.
+</p>
+
+<a href="produtos.html" class="btn">
+Ver Catálogo
+</a>
+
 </section>
 
-<section class="section" id="produtos">
-<h2 class="section-title">Destaques da Semana</h2>
+<section class="section">
+
+<h2 class="section-title">Mais Procuradas</h2>
 
 <div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800">
+<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200">
 <div class="card-content">
-<h3>Inter Miami 2026</h3>
+<h3>Real Madrid</h3>
 <div class="price">R$ 149,90</div>
-<a class="buy" href="#">Comprar</a>
+<a href="#" class="buy">Comprar</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800">
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=1200">
 <div class="card-content">
-<h3>Real Madrid 2026</h3>
+<h3>Barcelona</h3>
 <div class="price">R$ 149,90</div>
-<a class="buy" href="#">Comprar</a>
+<a href="#" class="buy">Comprar</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?w=800">
+<img src="https://images.unsplash.com/photo-1552667466-07770ae110d0?w=1200">
 <div class="card-content">
-<h3>Barcelona 2026</h3>
+<h3>Manchester City</h3>
 <div class="price">R$ 149,90</div>
-<a class="buy" href="#">Comprar</a>
+<a href="#" class="buy">Comprar</a>
 </div>
 </div>
 
 </div>
+
 </section>
 
-<section class="feature">
+<section class="features">
+
 <h2>Qualidade Premium</h2>
+
 <p>
-Escudos bordados, tecido respirável, acabamento profissional
-e envio para todo o Brasil.
+Réplicas de alta qualidade com excelente acabamento,
+tecido confortável e visual impressionante.
+Tudo pensado para quem quer vestir seu time com orgulho.
 </p>
-</section>
 
-<section class="section">
-<h2 class="section-title">Guia de Tamanhos</h2>
+<div class="stats">
 
-<div class="sizes">
-<table>
-<tr>
-<th>Tamanho</th>
-<th>Altura</th>
-</tr>
-
-<tr>
-<td>P</td>
-<td>165-170 cm</td>
-</tr>
-
-<tr>
-<td>M</td>
-<td>170-175 cm</td>
-</tr>
-
-<tr>
-<td>G</td>
-<td>175-180 cm</td>
-</tr>
-
-<tr>
-<td>GG</td>
-<td>180-190 cm</td>
-</tr>
-
-<tr>
-<td>XGG</td>
-<td>190+ cm</td>
-</tr>
-
-</table>
+<div class="stat">
+<h3>100%</h3>
+<p>Paixão por Futebol</p>
 </div>
+
+<div class="stat">
+<h3>24h</h3>
+<p>Suporte ao Cliente</p>
+</div>
+
+<div class="stat">
+<h3>+500</h3>
+<p>Clientes Atendidos</p>
+</div>
+
+</div>
+
 </section>
 
 <footer>
-<h3>Elite Jerseys</h3>
+
+<h3>CamisetasCSS</h3>
+
+<p>Camisas de futebol premium para apaixonados pelo esporte.</p>
+
 <br>
+
 <p>WhatsApp: (44) 99999-9999</p>
-<p>Instagram: @elitejerseys</p>
-<p>© 2026 Todos os direitos reservados.</p>
+
+<p>Instagram: @camisetascss</p>
+
+<br>
+
+<p>© 2026 CamisetasCSS - Todos os direitos reservados.</p>
+
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/5544999999999">
+<a class="whatsapp" href="https://wa.me/5544999999999">
 💬
 </a>
 
